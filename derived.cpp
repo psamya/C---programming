@@ -38,7 +38,7 @@ class derived:public base
     {
         std::cout<<"***the physical fit information***" ;
         std::cout<<"height and weight::"<<h<<"  "<<w;
-        //std::cout<<"weight"<<w;
+        // std::cout<<"weight"<<w;
     }
 };
 int main()
