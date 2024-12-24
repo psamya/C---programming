@@ -4,27 +4,20 @@
 {
    public:
     char name[25];
-    //int workhours,  salary,  overtime,  pay;
-   // int hourlysalary, overtimepay;
     void input()
   { std::cout<<"Enter name:";
     std::cin>>name;
     std::cout<<"working hours:";
     std::cin>>workhours;
-    // std::cout<<"overtime hours:";
-    // std::cin>>overtime;
     std::cout<<"hourly salary:";
     std::cin>>hourlysalary;
   }
 };
-
-  class principle:public employee
+   class principle:public employee
 {  public:
-    int calculate() // principle salary calculation
-  { // int workhours,hourlysalary,overtime;
-     //pay = workhours*hourlysalary;
-    // std::cout<<pay;
-      if(workhours>30)  // week workhours 
+    int calculate()
+    {
+      if(workhours>30)  
    {   overtime = workhours-30;
        overtimepay = overtime * hourlysalary;
       salary = overtimepay + workhours*hourlysalary;
@@ -40,9 +33,9 @@
   }
 };
   class teacher:public employee
-{  public:
-    double calculate1() // teacher salary calculation
-  {  //int pay,workhours,hourlysalary,overtime,salary,overtimepay; 
+ {  public:
+    double calculate1() 
+    {
     pay = workhours * hourlysalary;
 
      if(workhours>30)
@@ -59,8 +52,7 @@
   class peon:public employee
 {  public:
 
-   double calculate2() // peon salary calculation
-  {// int pay,workhours,overtime,hourlysalary,overtimepay,salary;
+   double calculate2() {
     pay = workhours * hourlysalary;
 
  if(workhours>40)
